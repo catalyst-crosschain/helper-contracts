@@ -6,13 +6,10 @@ import "../src/SwapHelper.sol";
 
 contract DeploySwapHelper is Script {
     function run() public {
-        // Define the Uniswap Router address and any other necessary parameters
-        address uniswapRouter = address(0); // Replace with the actual Uniswap Router address
+        address uniswapRouter = address(0);
 
-        // Deploy the SwapHelper contract
         SwapHelper swapHelper = new SwapHelper(uniswapRouter);
 
-        // Optionally, log the address of the deployed contract
         console.log("SwapHelper deployed at:", address(swapHelper));
     }
 }
